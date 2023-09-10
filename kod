@@ -1,0 +1,110 @@
+import math
+#----------------------------------|
+# Obwody:                          |
+# 1 - obwod kwadratu               |
+# 2 - obwod prostokata             |
+# 3 - obwod rownolegloboku         |
+# 4 - obwod trojkata               |
+# 5 - obwod trojkata rownobocznego |
+# 6 - obwod kola                   |
+#----------------------------------|
+# Pola:                            |
+# 7 - pole kwadratu                |
+# 8 - pole prostakata              |
+# 9 - pole rownolegloboku          |
+# 10 - pole trapezu                |
+# 11 - pole trojkata               |
+# 12 - pole kola                   |
+#----------------------------------|
+# Objetosci:                       |
+# 13 - objetosc szescianu          |
+# 14 - objetosc prostopadloscianu  |
+# 15 - objetosc graniastoslupa     |
+# 16 - objetosc ostroslupa         |
+# 17 - objetosc walca              |
+# 18 - objetosc stozka             |
+# 19 - objetosc kuli               |
+#----------------------------------|
+# 20 - przekatna kwadratu
+
+z = (input("podaj cyfre z legendy wyzej: "))
+
+
+
+if z == "1":
+    a = int(input("Podaj bok kwadratu: "))
+    print("obwod to: ",(4 * a))
+elif z == "2":
+    a = int(input("Podaj bok prostokata lub rownolegloboku: "))
+    b = int(input("Podaj drugi bok prostokata lub rownolegloboku: "))
+    print("obwod to: ",(2 * a + 2 * b))
+elif z == "3":
+    a = int(input("Podaj pierwszy bok trapezu: "))
+    b = int(input("Podaj drugi bok trapezu: "))
+    c = int(input("Podaj trzeci bok trapezu: "))
+    d = int(input("Podaj czwarty bok trapezu: "))
+    print("obwod trapezu to: ",(a+b+c+d))
+elif z == "4":
+    a = int(input("Podaj pierwszy bok trojkata: "))
+    b = int(input("Podaj drugi bok trojkata: "))
+    c = int(input("Podaj trzeci bok trojkata: "))
+    print("obwod trojkata to:",(a+b+c))
+elif z == "5":
+    a = int(input("Podaj bok trojkata rownobocznego: "))
+    print("obwod trojkata rownobocznego to: ",(3 * a))
+elif z == "6":
+    a = int(input("Podaj promien kola: "))
+    print("obwod kola to: ",(2 * math.pi * a))
+elif z == "7":
+    a = int(input("Podaj bok kwadratu: "))
+    print("pole kwadratu to: ",(math.pow(a, 2)))
+elif z == "8":
+    a = int(input("Podaj pierwszy bok prostokata: "))
+    b = int(input("Podaj drugi bok prostokata: "))
+    print("pole prostokata to: ",(a * b))
+elif z == "9":
+    a = int(input("Podaj bok rownolegloboku: "))
+    b = int(input("Podaj wysokosc rownolegloboku ktora opada na wczesniej podany bok: "))
+    print("pole rownolegloboku to: ",(a * b))
+elif z == "10":
+    a = int(input("Podaj gorny bok trapezu: "))
+    b = int(input("Podaj dolny bok trapezu: "))
+    c = int(input("Podaj wysokosc pomiedzy tymi bokami trapezu: "))
+    print("pole trapezu to: ",(((a + b)*c)/2))
+elif z == "11":
+    a = int(input("Podaj bok trojkata: "))
+    b = int(input("Podaj wysokosc trojkatu ktora opada na wczesniej podany bok: "))
+    print("pole trojkata to: ",((a * b)/2))
+elif z == "12":
+    a = int(input("Podaj promien kola: "))
+    print("pole kola to: ",(math.pow(a, 2)*math.pi))
+elif z == "13":
+    a = int(input("Podaj bok szescianu: "))
+    print("objetosc szescianu to: ",(math.pow(a, 3)))
+elif z == "14":
+    a = int(input("Podaj pierwszy bok prostopadloscianu: "))
+    b = int(input("Podaj drugi bok prostopadloscianu: "))
+    c = int(input("Podaj trzeci bok prostopadloscianu: "))
+    print("objetosc prostopadloscianu to: ",(a * b * c))
+elif z == "15":
+    a = int(input("Podaj pole podstawy graniastoslupa: "))
+    b = int(input("Podaj wysokosc graniastoslupa: "))
+    print("objetosc graniastoslupa to:",(a * b))
+elif z == "16":
+    a = int(input("Podaj pole podstawy ostroslupa: "))
+    b = int(input("Podaj wysokosc ostroslupa: "))
+    print("objetosc ostroslupa to: ",(a * b / 3))
+elif z == "17":
+    a = int(input("Podaj promien podstawy walca: "))
+    b = int(input("Podaj wysokosc walca: "))
+    print("objetosc walca to: ",((math.pow(a, 2)*math.pi)*b))
+elif z == "18":
+    a = int(input("Podaj promien podstawy stozka: "))
+    b = int(input("Podaj wysokosc stozka: "))
+    print("objetosc stozka to: ",((math.pow(a, 2)*math.pi)*b/3))
+elif z == "19":
+    a = int(input("Podaj promien kuli: "))
+    print("objetosc kuli to: ",((4/3)*(math.pow(a, 3)*math.pi)))
+elif z == "20":
+    a = int(input("Podaj bok kwadratu: "))
+    print("przekatna kwadratu to: ",(a*(math.sqrt(2))))
